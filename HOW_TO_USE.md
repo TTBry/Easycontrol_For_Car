@@ -65,7 +65,7 @@
 5. 扩展使用
 	1. 易控车机版支持在外部使用广播控制
 		
-		广播地址为："**top.eiyooooo.easycontrol.app.CONTROL**"，需要向意向也就是Intent填入想要做的动作
+		广播地址为："**com.autonavi.amapauto.CONTROL**"，需要向意向也就是Intent填入想要做的动作
 		- 启动默认设备：
 			- action：startDefault
 		    - mode：0, 1 （可选，默认为0，0:屏幕镜像，1:应用流转）

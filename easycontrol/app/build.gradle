@@ -3,11 +3,11 @@ plugins {
 }
 
 android {
-  namespace 'top.eiyooooo.easycontrol.app'
+  namespace 'com.autonavi.amapauto'
   compileSdk 34
 
   defaultConfig {
-    applicationId 'top.eiyooooo.easycontrol.app'
+    applicationId 'com.autonavi.amapauto'
     minSdk 21
     targetSdk 34
     versionCode 10602

@@ -3,13 +3,13 @@ plugins {
 }
 
 android {
-  namespace 'top.eiyooooo.easycontrol.server'
+  namespace 'com.autonavi.amapauto.server'
   compileSdk 34
 
   defaultConfig {
     minSdk 21
     targetSdk 34
-    applicationId 'top.eiyooooo.easycontrol.server'
+    applicationId 'com.autonavi.amapauto.server'
     versionCode 30000
     versionName '3.0.0'
   }
