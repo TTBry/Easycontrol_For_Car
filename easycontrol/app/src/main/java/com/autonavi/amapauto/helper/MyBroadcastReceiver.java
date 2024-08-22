@@ -39,8 +39,7 @@ public class MyBroadcastReceiver extends BroadcastReceiver {
     filter.addAction(ACTION_CONTROL);
     filter.addAction(ACTION_SCREEN_OFF);
     filter.addAction(ACTION_CONFIGURATION_CHANGED);
-    if (Build.VERSION.SDK_INT >= 33) context.registerReceiver(this, filter, Context.RECEIVER_EXPORTED);
-    else context.registerReceiver(this, filter);
+    context.registerReceiver(this, filter);
   }
 
   public void unRegister(Context context) {
@@ -165,7 +164,7 @@ public class MyBroadcastReceiver extends BroadcastReceiver {
     if (AppData.usbManager==null)return;
     Intent usbPermissionIntent = new Intent(ACTION_USB_PERMISSION);
     usbPermissionIntent.setPackage(AppData.main.getPackageName());
-    PendingIntent permissionIntent = PendingIntent.getBroadcast(context, 0, usbPermissionIntent, Build.VERSION.SDK_INT >= Build.VERSION_CODES.S ? PendingIntent.FLAG_MUTABLE : 0);
+    PendingIntent permissionIntent = PendingIntent.getBroadcast(context, 0, usbPermissionIntent, 0);
     AppData.usbManager.requestPermission(usbDevice, permissionIntent);
   }
 
