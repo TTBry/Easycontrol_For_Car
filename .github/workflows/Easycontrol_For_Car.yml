@@ -29,5 +29,5 @@ jobs:
     - name: Upload APK
       uses: actions/upload-artifact@v2
       with:
-        name: my-build-apk
-        path: ./easycontrol/app/build/outputs/apk/debug/*.apk
+        name: my-build-apk-1
+        path: ./easycontrol/app/build/outputs/apk/release/*.apk
