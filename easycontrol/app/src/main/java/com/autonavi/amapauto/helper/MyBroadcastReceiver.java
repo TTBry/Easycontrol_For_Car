@@ -39,7 +39,7 @@ public class MyBroadcastReceiver extends BroadcastReceiver {
     filter.addAction(ACTION_CONTROL);
     filter.addAction(ACTION_SCREEN_OFF);
     filter.addAction(ACTION_CONFIGURATION_CHANGED);
-    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) context.registerReceiver(this, filter, Context.RECEIVER_EXPORTED);
+    if (Build.VERSION.SDK_INT >= 33) context.registerReceiver(this, filter, Context.RECEIVER_EXPORTED);
     else context.registerReceiver(this, filter);
   }
 

@@ -674,7 +674,7 @@ public class PublicTools {
 
   private static Intent getSubIntentInMainIntent(Intent mainIntent) {
     Intent subIntent;
-    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) subIntent = mainIntent.getParcelableExtra("sub_intent_key", Intent.class);
+    if (Build.VERSION.SDK_INT >= 33) subIntent = mainIntent.getParcelableExtra("sub_intent_key", Intent.class);
     else subIntent = mainIntent.getParcelableExtra("sub_intent_key");
     return subIntent;
   }
@@ -790,7 +790,7 @@ public class PublicTools {
   private static boolean areActivityIntent(Context context, Intent intent) {
     if (intent == null) return false;
     PackageManager packageManager = context.getPackageManager();
-    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) return !packageManager.queryIntentActivities(intent, PackageManager.ResolveInfoFlags.of(PackageManager.MATCH_DEFAULT_ONLY)).isEmpty();
+    if (Build.VERSION.SDK_INT >= 33) return !packageManager.queryIntentActivities(intent, PackageManager.ResolveInfoFlags.of(PackageManager.MATCH_DEFAULT_ONLY)).isEmpty();
     return !packageManager.queryIntentActivities(intent, PackageManager.MATCH_DEFAULT_ONLY).isEmpty();
   }
 
