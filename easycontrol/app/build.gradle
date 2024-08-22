@@ -4,12 +4,12 @@ plugins {
 
 android {
   namespace 'com.autonavi.amapauto'
-  compileSdk 34
+  compileSdk 28
 
   defaultConfig {
     applicationId 'com.autonavi.amapauto'
     minSdk 21
-    targetSdk 34
+    targetSdk 28
     versionCode 6000001
     versionName "5.0.0.600066"
     ndk {
